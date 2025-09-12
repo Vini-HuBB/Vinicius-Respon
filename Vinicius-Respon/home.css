@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* base */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Pesquisa */
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.pesquisa-input {
+    flex: 1;
+    height: 2.5rem;
+    padding-left: 2.5rem;
+    background: url('assets copy/img/loupe.png') no-repeat 0.5rem center;
+    background-size: 20px 20px;
+    border: none;
+    color: #000000;
+}
+
+placeholder{color: ffffff;}
+
+/* Navegação */
+nav{
+    background-color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+ul{
+    display: flex;
+}
+
+/* --- BANNER --- */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 80vh;
+}
+
+/* --- PRODUTOS --- */
+.produtos1, .produtos2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+figure {
+    background: #111111;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.prod {
+    width: 100%;
+    /* max-width: 280px; */
+    height: 80%;
+    
+    border-radius: 0.5rem;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 0.75rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #ffffff;
+}
+
+figcaption:hover {
+    color: red;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111111;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 576px) {
+    .logo img {
+        max-width: 140px;
+    }
+
+    .pesquisa-input {
+        font-size: 0.9rem;
+    }
+
+    figcaption {
+        font-size: 0.85rem;
+    }
+
+    .produtos1.produtos2{
+        max-width: 100px;
+    }
+}
